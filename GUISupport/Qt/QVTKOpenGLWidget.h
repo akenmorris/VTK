@@ -162,7 +162,8 @@ public:
    */
   QImage grabFramebuffer();
 
-signals:
+Q_SIGNALS:
+// signals:
   /**
    * This signal will be emitted whenever a mouse event occurs within the QVTK window.
    */
@@ -178,7 +179,8 @@ signals:
    */
   void widgetEvent(QEvent* e);
 
-private slots:
+private Q_SLOTS:
+// private slots:
   /**
    * called as a response to `QVTKOpenGLWindow::event` to forward the signal.
    */

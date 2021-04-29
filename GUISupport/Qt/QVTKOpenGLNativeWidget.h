@@ -178,13 +178,15 @@ public:
    */
   void setQVTKCursor(const QCursor &cursor);
 
-signals:
+Q_SIGNALS:
+// signals:
   /**
    * This signal will be emitted whenever a mouse event occurs within the QVTK window.
    */
   void mouseEvent(QMouseEvent* event);
 
-protected slots:
+protected Q_SLOTS:
+// protected slots:
   /**
    * Called as a response to `QOpenGLContext::aboutToBeDestroyed`. This may be
    * called anytime during the widget lifecycle. We need to release any OpenGL
@@ -192,7 +194,8 @@ protected slots:
    */
   virtual void cleanupContext();
 
-private slots:
+private Q_SLOTS:
+// private slots:
   /**
    * recreates the FBO used for VTK rendering.
    */
